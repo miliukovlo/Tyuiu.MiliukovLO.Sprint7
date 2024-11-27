@@ -1,0 +1,92 @@
+﻿[
+  {
+    "CountryName": "Russia",
+    "Capital": "Moscow",
+    "Area": 17125191,
+    "Developed": true,
+    "Population": 146206000,
+    "Nation": "Russian",
+    "Note": "Россия - самая большая страна в мире."
+  },
+  {
+    "CountryName": "Canada",
+    "Capital": "Ottawa",
+    "Area": 9984670,
+    "Developed": true,
+    "Population": 38005238,
+    "Nation": "Canadian",
+    "Note": "Канада - страна с высоким уровнем жизни."
+  },
+  {
+    "CountryName": "China",
+    "Capital": "Beijing",
+    "Area": 9596961,
+    "Developed": true,
+    "Population": 1393409038,
+    "Nation": "Chinese",
+    "Note": "Китай - самая густонаселенная страна в мире."
+  },
+  {
+    "CountryName": "United States",
+    "Capital": "Washington, D.C.",
+    "Area": 9372610,
+    "Developed": true,
+    "Population": 331002651,
+    "Nation": "American",
+    "Note": "США - одна из крупнейших экономик мира."
+  },
+  {
+    "CountryName": "Brazil",
+    "Capital": "Brasília",
+    "Area": 8515767,
+    "Developed": false,
+    "Population": 212559417,
+    "Nation": "Brazilian",
+    "Note": "Бразилия - крупнейшая страна в Южной Америке."
+  },
+  {
+    "CountryName": "Australia",
+    "Capital": "Canberra",
+    "Area": 7692024,
+    "Developed": true,
+    "Population": 25499884,
+    "Nation": "Australian",
+    "Note": "Австралия известна своим уникальным биоразнообразием."
+  },
+  {
+    "CountryName": "India",
+    "Capital": "New Delhi",
+    "Area": 3287263,
+    "Developed": false,
+    "Population": 1380004385,
+    "Nation": "Indian",
+    "Note": "Индия - вторая по населению страна в мире."
+  },
+  {
+    "CountryName": "Argentina",
+    "Capital": "Buenos Aires",
+    "Area": 2780400,
+    "Developed": false,
+    "Population": 45195777,
+    "Nation": "Argentine",
+    "Note": "Аргентина славится своими танго и вином."
+  },
+  {
+    "CountryName": "France",
+    "Capital": "Paris",
+    "Area": 551695,
+    "Developed": true,
+    "Population": 65273511,
+    "Nation": "French",
+    "Note": "Франция известна своей культурой и историей."
+  },
+  {
+    "CountryName": "Germany",
+    "Capital": "Berlin",
+    "Area": 357022,
+    "Developed": true,
+    "Population": 83783942,
+    "Nation": "German",
+    "Note": "Германия - ведущая экономика Европы."
+  }
+]
