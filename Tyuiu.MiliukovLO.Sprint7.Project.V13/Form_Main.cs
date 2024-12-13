@@ -27,7 +27,25 @@ namespace Tyuiu.MiliukovLO.Sprint7.Project.V13
             dataGridViewInput.DataSource = countries;
             dataGridViewOutput.AutoGenerateColumns = true;
             dataGridViewOutput.DataSource = countries;
+
+            chartOfPopulation_MLO.Series.Clear();
+            chartCountryArea_MLO.Series.Clear();
+            chartCountryArea_MLO.Titles("");
+
+            foreach (var country in countries)
+            {
+                var seriesPopulation = chartOfPopulation_MLO.Series.Add(country.CountryName);
+                seriesPopulation.Points.AddXY(country.CountryName, country.Population);
+                var seriesArea = chartCountryArea_MLO.Series.Add(country.CountryName);
+                seriesArea.Points.AddXY(country.CountryName, country.Area);
+            }
+
+            chartOfPopulation_MLO.ChartAreas[0].AxisX.Title = "Страны";
+            chartOfPopulation_MLO.ChartAreas[0].AxisY.Title = "Население";
+            chartCountryArea_MLO.ChartAreas[0].AxisX.Title = "Страны";
+            chartCountryArea_MLO.ChartAreas[0].AxisY.Title = "Площадь";
         }
+
 
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -39,6 +57,23 @@ namespace Tyuiu.MiliukovLO.Sprint7.Project.V13
             List<Country> countries = ds.SearchCountry(textBoxName.Text);
             dataGridViewOutput.AutoGenerateColumns = true;
             dataGridViewOutput.DataSource = countries;
+            chartOfPopulation_MLO.Series.Clear();
+
+            chartOfPopulation_MLO.Series.Clear();
+            chartCountryArea_MLO.Series.Clear();
+
+            foreach (var country in countries)
+            {
+                var seriesPopulation = chartOfPopulation_MLO.Series.Add(country.CountryName);
+                seriesPopulation.Points.AddXY(country.CountryName, country.Population);
+                var seriesArea = chartCountryArea_MLO.Series.Add(country.CountryName);
+                seriesArea.Points.AddXY(country.CountryName, country.Area);
+            }
+
+            chartOfPopulation_MLO.ChartAreas[0].AxisX.Title = "Страны";
+            chartOfPopulation_MLO.ChartAreas[0].AxisY.Title = "Население";
+            chartCountryArea_MLO.ChartAreas[0].AxisX.Title = "Страны";
+            chartCountryArea_MLO.ChartAreas[0].AxisY.Title = "Площадь";
         }
 
         private void dataGridViewOutput_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -51,6 +86,21 @@ namespace Tyuiu.MiliukovLO.Sprint7.Project.V13
             int columnIndex = e.ColumnIndex;
             List<Country> countries = ds.SortCountry(columnIndex);
             dataGridViewOutput.DataSource = countries;
+            chartOfPopulation_MLO.Series.Clear();
+            chartCountryArea_MLO.Series.Clear();
+
+            foreach (var country in countries)
+            {
+                var seriesPopulation = chartOfPopulation_MLO.Series.Add(country.CountryName);
+                seriesPopulation.Points.AddXY(country.CountryName, country.Population);
+                var seriesArea = chartCountryArea_MLO.Series.Add(country.CountryName);
+                seriesArea.Points.AddXY(country.CountryName, country.Area);
+            }
+
+            chartOfPopulation_MLO.ChartAreas[0].AxisX.Title = "Страны";
+            chartOfPopulation_MLO.ChartAreas[0].AxisY.Title = "Население";
+            chartCountryArea_MLO.ChartAreas[0].AxisX.Title = "Страны";
+            chartCountryArea_MLO.ChartAreas[0].AxisY.Title = "Площадь";
 
         }
 
@@ -66,7 +116,7 @@ namespace Tyuiu.MiliukovLO.Sprint7.Project.V13
             {
                 string filename = saveFileDialog_MLO.FileName;
 
-                StringBuilder csvContent = new StringBuilder();
+                StringBuilder csvContent = new();
 
                 for (int i = 0; i < dataGridViewOutput.Columns.Count; i++)
                 {
@@ -80,7 +130,7 @@ namespace Tyuiu.MiliukovLO.Sprint7.Project.V13
                 {
                     for (int i = 0; i < dataGridViewOutput.Columns.Count; i++)
                     {
-                        csvContent.Append(row.Cells[i].Value?.ToString()); 
+                        csvContent.Append(row.Cells[i].Value?.ToString());
                         if (i < dataGridViewOutput.Columns.Count - 1)
                             csvContent.Append(",");
                     }
@@ -102,5 +152,9 @@ namespace Tyuiu.MiliukovLO.Sprint7.Project.V13
             help.ShowDialog();
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
