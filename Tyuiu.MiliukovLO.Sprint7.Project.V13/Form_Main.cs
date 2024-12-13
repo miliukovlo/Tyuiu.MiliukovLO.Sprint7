@@ -30,7 +30,6 @@ namespace Tyuiu.MiliukovLO.Sprint7.Project.V13
 
             chartOfPopulation_MLO.Series.Clear();
             chartCountryArea_MLO.Series.Clear();
-            chartCountryArea_MLO.Titles("");
 
             foreach (var country in countries)
             {
