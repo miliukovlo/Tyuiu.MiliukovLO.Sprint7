@@ -10,6 +10,7 @@ namespace Tyuiu.MiliukovLO.Sprint7.Project.V13.Test
         {
             DataService ds = new();
             Assert.AreEqual(10, ds.GetCountries().Count());
+
         }
     }
 }
